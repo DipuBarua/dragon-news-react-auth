@@ -3,7 +3,7 @@
 const RightSideNav = () => {
     return (
         <div>
-            <p className=" text-3xl">Right side</p>
+            <p className=" text-2xl"> right side</p>
         </div>
     );
 };
