@@ -1,7 +1,22 @@
 import { Link, NavLink } from "react-router-dom";
-import user from '../../../assets/user.png';
+import userLogo from '../../../assets/user.png';
+import { useContext } from "react";
+import { AuthContext } from "../../../contextProvider/AuthProvider";
 
 const Navbar = () => {
+
+    const { user, logOut } = useContext(AuthContext);
+
+    const handleSignOut = () => {
+        logOut()
+            .then(result => {
+                console.log(result.user);
+            })
+            .catch(error => {
+                console.log(error);
+            })
+    }
+
     const NavLinks = <>
         <li><NavLink to={'/'}>Home</NavLink></li>
         <li><NavLink to={'/about'}>About</NavLink></li>
@@ -31,14 +46,21 @@ const Navbar = () => {
 
                 <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
                     <div className="w-10 rounded-full">
-                        <img src={user} />
+                        <img src={userLogo} />
                     </div>
                 </label>
+                {
+                    user ?
+                        <button onClick={handleSignOut} className=" btn btn-neutral">Sign Out</button>
+                        :
+                        <Link to={'/login'}><button className=" btn btn-neutral">Log in</button></Link>
+                }
 
-                <Link to={'/login'}><button className=" btn btn-neutral">Log in</button></Link>
             </div>
         </div>
     );
 };
 
 export default Navbar;
+
+// Be careful to use :::>>> onClick, onChange, onSubmit
