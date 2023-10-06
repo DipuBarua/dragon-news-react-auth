@@ -11,7 +11,7 @@ const LeftSideNav = () => {
     }, [])
 
     return (
-        <div className=" border border-black">
+        <div>
             <h2 className=" text-2xl font-bold">All Caterogy</h2>
             {
                 categories.map(category =>

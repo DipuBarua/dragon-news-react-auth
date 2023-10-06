@@ -5,7 +5,7 @@ import qZone3 from '../../../assets/qZone3.png';
 
 const RightSideNav = () => {
     return (
-        <div className=' border border-black'>
+        <div>
 
             <div className=' p-4 space-y-2 mb-5'>
                 <h2 className=' text-2xl font-poppins font-semibold mb-2'>Login With</h2>
@@ -21,19 +21,19 @@ const RightSideNav = () => {
 
             <div className=' p-4 mb-5'>
                 <h2 className=' text-2xl font-poppins font-semibold mb-2'>Find Us On</h2>
-                <a className=' flex items-center p-4 text-lg border border-black rounded-t-lg' href="">
+                <a className=' flex items-center p-4 text-lg border rounded-t-lg' href="">
                     <div className=' mr-2 border rounded-full p-3 text-blue-700 bg-gray-200'>
                         <BsFacebook></BsFacebook>
                     </div>
                     Facebook
                 </a>
-                <a className=' flex items-center p-4 text-lg border-x border-black ' href="">
+                <a className=' flex items-center p-4 text-lg border-x' href="">
                     <div className=' mr-2 border rounded-full p-3 text-blue-500 bg-gray-200'>
                         <BsTwitter></BsTwitter>
                     </div>
                     Twitter
                 </a>
-                <a className=' flex items-center p-4 text-lg border border-black rounded-b-lg' href="">
+                <a className=' flex items-center p-4 text-lg border rounded-b-lg' href="">
                     <div className=' mr-2 border rounded-full p-3 text-pink-600 bg-gray-200'>
                         <BsInstagram></BsInstagram>
                     </div>
